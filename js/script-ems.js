@@ -60,13 +60,13 @@ empTable.addEventListener('click', (e) => {
 // BUILD THE EMPLOYEES GRID
 function buildGrid() {
     // REMOVE THE EXISTING SET OF ROWS BY REMOVING THE ENTIRE TBODY SECTION
-    document.querySelector('tbody').innerHTML = '';
+    empTable.lastElementChild.remove();
     // REBUILD THE TBODY FROM SCRATCH
-    let tbody = '';
+    let tbody = document.createElement('tbody');
     // LOOP THROUGH THE ARRAY OF EMPLOYEES
     // REBUILDING THE ROW STRUCTURE
     for (let emp of employees) {
-        tbody += `<tr><td>${emp[0]}</td>
+        tbody.innerHTML += `<tr><td>${emp[0]}</td>
                     <td>${emp[1]}</td>
                     <td>${emp[2]}</td>
                     <td>${emp[3]}</td>
@@ -75,7 +75,7 @@ function buildGrid() {
                 </tr>`;
     }
     // BIND THE TBODY TO THE EMPLOYEE TABLE
-    document.querySelector('tbody').innerHTML = tbody;
+   empTable.appendChild(tbody);
     // UPDATE EMPLOYEE COUNT
     empCount.value = employees.length;
     // STORE THE ARRAY IN STORAGE
