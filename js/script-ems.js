@@ -25,13 +25,13 @@ form.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
     e.preventDefault();
     // GET THE VALUES FROM THE TEXT BOXES
-    let id = parseInt(document.querySelector('#id').value);
-    let name = document.querySelector('#name').value;
-    let extension = parseInt(document.querySelector('#extension').value);
-    let email = document.querySelector('#email').value;
-    let department = document.querySelector('#department').value;
+    let id          = parseInt(document.querySelector('#id').value);
+    let name        = document.querySelector('#name').value;
+    let extension   = parseInt(document.querySelector('#extension').value);
+    let email       = document.querySelector('#email').value;
+    let department  = document.querySelector('#department').value;
     // ADD THE NEW EMPLOYEE TO A NEW ARRAY OBJECT
-    let newEmp = [id,name, extension, email, department];
+    let newEmp      = [id,name, extension, email, department];
     // PUSH THE NEW ARRAY TO THE *EXISTING* EMPLOYEES ARRAY
     employees.push(newEmp);
     // BUILD THE GRID
