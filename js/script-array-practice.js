@@ -1,6 +1,6 @@
 //STEP 1
-// let movies = ['Frozen', 'Shrek', 'Toy Story', 'Home Alone', 'Lion King'];
-// console.log(movies[1]);
+let movies = ['Frozen', 'Shrek', 'Toy Story', 'Home Alone', 'Lion King'];
+console.log(movies[1]);
 
 // STEP 2
 // let movies =new Array(5);
